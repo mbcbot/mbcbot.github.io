@@ -32,7 +32,7 @@ body {
 }
 .linear-progress-material {
   background: #FFF;
-  height: 7px;
+  height: 5px;
   position: fixed;
   width: 100%;
   margin: 0 auto;
