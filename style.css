@@ -12,7 +12,7 @@ body {
           justify-content: center;
   -webkit-box-align: center;
           align-items: center;
-  background-color: #008eff;
+  background-color: #03A9F4;
 }
 .loader {
   color: #fff;
@@ -46,7 +46,7 @@ body {
 
 .linear-progress-material .bar {
   position: absolute;
-  background: #008eff;
+  background: #03A9F4;
   -webkit-transition: -webkit-transform 0.2s linear;
   transition: -webkit-transform 0.2s linear;
   transition: transform 0.2s linear;
