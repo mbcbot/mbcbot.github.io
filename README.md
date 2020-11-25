@@ -2,7 +2,7 @@
 
 Just a bot Tailored for S5 CSE Mbccet Students ;)
 
-Demo: [View](https://mbcbot.github.io)
+**Demo:** [View](https://mbcbot.github.io)
 
 (Only Need to authenticate with the bot once)
 
@@ -13,7 +13,7 @@ Demo: [View](https://mbcbot.github.io)
 ![output](final.png)
 
 The Bot can also send a documented self message to the user's whatsapp
-(whatsapp number taken from the database)
+(whatsapp number taken from database)
 
 ![WA](msg.png)
 
