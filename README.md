@@ -12,6 +12,11 @@ Demo: [View](https://mbcbot.github.io)
 
 ![output](final.png)
 
+The Bot can also send a documented self message to the user's whatsapp
+(whatsapp number taken from the database)
+
+![WA](msg.png)
+
 ## Scopes:
 
 1. https://www.googleapis.com/auth/script.external_request
