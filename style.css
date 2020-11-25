@@ -12,7 +12,11 @@ body {
           justify-content: center;
   -webkit-box-align: center;
           align-items: center;
-  background-color: #03A9F4;
+background: -webkit-linear-gradient(10deg, #03A9F4, #673AB7); 
+background:    -moz-linear-gradient(10deg, #03A9F4, #673AB7); 
+background:     -ms-linear-gradient(10deg, #03A9F4, #673AB7); 
+background:      -o-linear-gradient(10deg, #03A9F4, #673AB7); 
+background:         linear-gradient(10deg, #03A9F4, #673AB7);
 }
 .loader {
   color: #fff;
