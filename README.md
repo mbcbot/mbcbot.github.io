@@ -2,7 +2,7 @@
 
 Just A bot Tailored for S5 CSE Mbccet Students ;)
 
-## View Demo: [View](https://mbcbot.github.io)
+## Demo: [View](https://mbcbot.github.io)
 
 (Only Need to authenticate with the bot once)
 
