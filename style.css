@@ -44,7 +44,7 @@ background:         linear-gradient(10deg, #03A9F4, #673AB7);
 
 .animated:before {
   content: "cool.";
-  animation: topToBottom 10s infinite 0s;
+  animation: topToBottom 25s infinite 0s;
 }
 .linear-progress-material {
   background: #FFF;
@@ -85,17 +85,65 @@ background:         linear-gradient(10deg, #03A9F4, #673AB7);
   0% {
     content: "Collecting Attendence...";
   }
-  25% {
-    content: "Adjusting flux capacitor..";
-  }
-  50% {
-    content: "Shovelling coal into the server.";
-  }
-  75% {
+  5% {
     content: "Spinning the hamster..";
   }
-  100% {
+  10% {
+    content: "Adjusting flux capacitor..";
+  }
+  15% {
+    content: "Shovelling coal into the server.";
+  }
+  20% {
     content: "Swapping time and space...";
+  }
+  25% {
+    content: "Warming up Large Hadron Collider..";
+  }
+  30% {
+    content: "Cleaning off the cobwebs..";
+  }
+  35% {
+    content: "Distracted by cat gifs..";
+  }
+  40% {
+    content: "Please wait while the intern refills his coffee.";
+  }
+  45% {
+    content: "Finishing up..";
+  }
+  50% {
+    content: "...and enjoy the elevator music";
+  }
+  55% {
+    content: "Please hold on as we reheat our coffee";
+  }
+  60% {
+    content: "Ordering 1s and 0s...";
+  }
+  65% {
+    content: "Feel free to spin in your chair.";
+  }
+  70% {
+    content: "Optimizing the optimizer...";
+  }
+  75% {
+    content: "Pushing pixels to render...";
+  }
+  80% {
+    content: "Still faster than Windows update!";
+  }
+  85% {
+    content: "We need more dilithium crystals..";
+  }
+  90% {
+    content: "Almost done..";
+  }
+  95% {
+    content: "Making you a cookie..";
+  }
+  100% {
+    content: "Looking for Attendence..";
   }
 }
 @-webkit-keyframes pulse {
