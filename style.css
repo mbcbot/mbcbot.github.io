@@ -24,6 +24,7 @@ background:         linear-gradient(10deg, #03A9F4, #673AB7);
   font-weight: bold;
   font-size: 20vh;
   opacity: 0.8;
+  text-align: center;
 }
 .loader span {
   display: inline-block;
@@ -33,6 +34,17 @@ background:         linear-gradient(10deg, #03A9F4, #673AB7);
 .loader span:nth-child(odd) {
   -webkit-animation-delay: 0.4s;
           animation-delay: 0.4s;
+}
+.animated {
+  font-size: 11px !important;
+  color:#fff;
+  font-weight: 100 !important;
+  font-style: normal;
+}
+
+.animated:before {
+  content: "cool.";
+  animation: topToBottom 10s infinite 0s;
 }
 .linear-progress-material {
   background: #FFF;
@@ -68,6 +80,23 @@ background:         linear-gradient(10deg, #03A9F4, #673AB7);
 .linear-progress-material .bar2 {
   -webkit-animation: growBar2 2.5s infinite, moveBar2 2.5s infinite;
           animation: growBar2 2.5s infinite, moveBar2 2.5s infinite;
+}
+ @keyframes topToBottom {
+  0% {
+    content: "Collecting Attendence...";
+  }
+  25% {
+    content: "Adjusting flux capacitor..";
+  }
+  50% {
+    content: "Shovelling coal into the server.";
+  }
+  75% {
+    content: "Spinning the hamster..";
+  }
+  100% {
+    content: "Swapping time and space...";
+  }
 }
 @-webkit-keyframes pulse {
   to {
