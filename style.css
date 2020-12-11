@@ -83,10 +83,10 @@ background:         linear-gradient(10deg, #03A9F4, #673AB7);
 }
  @keyframes topToBottom {
   0% {
-    content: "Collecting Attendence...";
+    content: "Spinning the hamster..";
   }
   5% {
-    content: "Spinning the hamster..";
+    content: "Collecting Attendence...";
   }
   10% {
     content: "Adjusting flux capacitor..";
