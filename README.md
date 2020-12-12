@@ -16,6 +16,8 @@ The Bot also fetches for students who submitted the Assignments
 
 ![Remaining](rem.png)
 
+![Remaining2](rem2.png)
+
 Notifies if No student has submitted.
 
 ![Nos](yet.png)
