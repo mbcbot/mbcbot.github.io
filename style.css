@@ -140,10 +140,10 @@ background:         linear-gradient(10deg, #03A9F4, #673AB7);
     content: "Almost done..";
   }
   95% {
-    content: "Making you a cookie..";
+    content: "Its taking longer than usual..";
   }
   100% {
-    content: "Looking for Attendence..";
+    content: "Looks like the Traffic is too high..";
   }
 }
 @-webkit-keyframes pulse {
