@@ -27,6 +27,10 @@ The Bot can also send a documented self message to the user's whatsapp
 
 ![WA](msg.png)
 
+Detailed View:-
+
+![DT](tail.png)
+
 ## Scopes:
 
 1. https://www.googleapis.com/auth/script.external_request
