@@ -1,6 +1,6 @@
 # Mbcbot
 
-Just A bot Tailored for S5 CSE Mbccet Students ;)
+Just A bot Tailored for Mbccet Students ;)
 
 ## Demo: [View](https://mbcbot.github.io)
 
