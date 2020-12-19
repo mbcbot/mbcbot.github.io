@@ -6,6 +6,14 @@ Just A bot Tailored for Mbccet Students ;)
 
 (Only Need to authenticate with the bot once)
 
+Current MBC Branches with Access to bot:
+
+1. S7 CSE
+2. S5 CSE
+3. S5 EC
+4. S5 ME
+
+
 ## Screenshots:
 
 ![preloader](loader.png)
