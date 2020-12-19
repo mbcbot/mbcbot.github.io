@@ -39,7 +39,7 @@ The Bot can also send a documented self message to the user's whatsapp
 
 Detailed View:-
 
-![DT](tail.png)
+![DT](demo.png)
 
 ## Scopes:
 
