@@ -83,7 +83,7 @@ background:         linear-gradient(10deg, #03A9F4, #673AB7);
 }
  @keyframes topToBottom {
   0% {
-    content: "Spinning the hamster..";
+    content: "Speed depends upon classroom data";
   }
   5% {
     content: "Collecting Attendence...";
