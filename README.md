@@ -31,13 +31,11 @@ The Bot also fetches for students who submitted the Assignments
 
 ![Remaining2](rem2.png)
 
-Notifies if No student has submitted.
-
 ![Nos](yet.png)
 
 The Bot can also send a documented self message to the user's whatsapp
 (whatsapp number taken from database and Protected from third party access)
-(This Feature has been Rollbacked and is now deprecated)
+-This Feature has been Rollbacked and is now deprecated.
 
 ![WA](msg.png)
 
