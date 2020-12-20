@@ -5,7 +5,7 @@ Just A bot Tailored for Mbccet Students ;)
 ## Demo: [View](https://mbcbot.github.io)
 
 (Only Need to authenticate with the bot once. 
-Initial Loading times may take upto 40 seconds depending upon the fetched data)
+Initial **Loading times may take upto 40 seconds** depending upon the fetched data)
 
 Current MBC Branches with Access to bot:
 
@@ -35,7 +35,7 @@ The Bot also fetches for students who submitted the Assignments
 
 ## Classroom Configs:
 
-1. S3 CSE
+**1. S3 CSE**
 
 | Classroom ID | Course |
 | --- | --- |
@@ -48,7 +48,7 @@ The Bot also fetches for students who submitted the Assignments
 | 149814004736 | DS LAB |
 | 192034952663 | OOP LAB |
 
-2. S5 CSE
+**2. S5 CSE**
 
 | Classroom ID | Course |
 | --- | --- |
@@ -62,7 +62,7 @@ The Bot also fetches for students who submitted the Assignments
 | 118821334592 | SC |
 | 189814440678 | SSL |
 
-3. S7 CSE
+**3. S7 CSE**
 
 | Classroom ID | Course |
 | --- | --- |
@@ -75,7 +75,7 @@ The Bot also fetches for students who submitted the Assignments
 | 118889199990 | ML |
 | 187736411161 | CD LAB |
 
-4. S5 EC
+**4. S5 EC**
 
 | Classroom ID | Course |
 | --- | --- |
@@ -88,7 +88,7 @@ The Bot also fetches for students who submitted the Assignments
 | 121733864717 | BE |
 | 138574518286 | POM |
 
-5. S5 ME
+**5. S5 ME**
 
 | Classroom ID | Course |
 | --- | --- |
