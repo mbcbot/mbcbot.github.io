@@ -8,10 +8,11 @@ Just A bot Tailored for Mbccet Students ;)
 
 Current MBC Branches with Access to bot:
 
-1. S7 CSE
+1. S3 CSE
 2. S5 CSE
-3. S5 EC
-4. S5 ME
+3. S7 CSE
+4. S5 EC
+5. S5 ME
 
 
 ## Screenshots:
@@ -43,7 +44,7 @@ Detailed View:-
 
 ## Scopes:
 
-1. https://www.googleapis.com/auth/script.external_request
-2. https://www.googleapis.com/auth/userinfo.email
-3. https://www.googleapis.com/auth/classroom.coursework.me
+1. googleapis/auth/script.external_request
+2. googleapis/auth/userinfo.email
+3. googleapis/auth/classroom.coursework.me.readonly
 
