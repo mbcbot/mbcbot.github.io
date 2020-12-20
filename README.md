@@ -4,7 +4,8 @@ Just A bot Tailored for Mbccet Students ;)
 
 ## Demo: [View](https://mbcbot.github.io)
 
-(Only Need to authenticate with the bot once)
+(Only Need to authenticate with the bot once. 
+Initial Loading times may take upto 40 seconds depending upon the fetched data)
 
 Current MBC Branches with Access to bot:
 
