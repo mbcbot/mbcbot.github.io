@@ -20,6 +20,8 @@ Current MBC Branches with Access to bot:
 
 ![preloader](loader.png)
 
+![DT](demo.png)
+
 ![output](final.png)
 
 The Bot also fetches for students who submitted the Assignments
@@ -39,9 +41,6 @@ The Bot can also send a documented self message to the user's whatsapp
 
 ![WA](msg.png)
 
-Detailed View:-
-
-![DT](demo.png)
 
 ## Scopes:
 
