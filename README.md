@@ -5,7 +5,7 @@ Just A bot Tailored for Mbccet Students ;)
 ## Demo: [View](https://mbcbot.github.io)
 
 (Only Need to authenticate with the bot once. 
-Initial **Loading times may take upto 40 seconds** depending upon the fetched data)
+Initial **Loading times may take upto 32 seconds** depending upon the fetched data)
 
 Current MBC Branches with Access to bot:
 
@@ -31,7 +31,7 @@ The Bot also fetches for students who submitted the Assignments
 
 ## Limitation:
 
-1. Users must be a Member of the Respective Google Classrooms (see below) else the bot throws an exception..
+1. User must be a Member of the Respective Google Classrooms (see list below) else the bot throws an exception..
 
 ## Classroom Configs:
 
@@ -99,12 +99,4 @@ The Bot also fetches for students who submitted the Assignments
 | 118916069778 | CPNM |
 | 119275507102 | DP |
 | 118789298021 | NDT |
-
-
-
-## Scopes:
-
-1. googleapis/auth/script.external_request
-2. googleapis/auth/userinfo.email
-3. googleapis/auth/classroom.coursework.me.readonly
 
