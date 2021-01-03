@@ -32,9 +32,9 @@ The Bot also fetches for students who submitted the Assignments
 
 ## Limitation:
 
-1. User must be a Member of the Respective Google Classrooms (see list below) else the bot throws an exception..
+1. User must be a Member of the Respective Branch's Google Classrooms (list below) else the bot throws an exception..
 
-## Classroom Configs:
+## Classroom Configs for Different Branches:
 
 **1. S3 CSE**
 
