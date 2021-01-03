@@ -14,6 +14,7 @@ Current MBC Branches with Access to bot:
 3. S7 CSE
 4. S5 EC
 5. S5 ME
+6. S5 CE (Pending)
 
 
 ## Screenshots:
