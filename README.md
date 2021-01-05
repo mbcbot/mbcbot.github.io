@@ -21,7 +21,7 @@ Current MBC Branches with Access to bot:
 
 ![preloader](loader.png)
 
-![demo1](demo.png)
+![demo1](demo1.png)
 
 The Bot also fetches for students who submitted the Assignments
 (Feature Available only for S5 CSE)
