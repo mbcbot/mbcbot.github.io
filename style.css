@@ -50,7 +50,7 @@ background:         linear-gradient(10deg, #03A9F4, #673AB7);
   margin: auto;
   width: 6px;
   height: 25px;
-  border-radius: 60%;
+  border-radius: 50px;
   background-color: transparent;
   transform-origin: center 60px;
   -webkit-animation: spinner-fade 1s infinite linear;
