@@ -37,7 +37,7 @@ background:         linear-gradient(10deg, #03A9F4, #673AB7);
 .spinner.center {
   position: absolute;
   left: 50%;
-  top: 40%;
+  top: 38%;
   transform: translate(-50%, -50%);
   margin: 0 auto;
 }
