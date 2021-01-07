@@ -19,7 +19,7 @@ Current MBC Branches with Access to bot:
 
 ## Screenshots:
 
-![preloader](loader.png)
+![preloader](loading.png)
 
 ![demo1](demo1.png)
 
