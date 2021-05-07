@@ -14,6 +14,11 @@
 </head>
 
 <body onload="bios()">
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none;">
+      <symbol id="starIcon" viewBox="0 0 24 24">
+          <polygon points="12,0 15.708,7.514 24,8.718 18,14.566 19.416,22.825 12,18.926 4.583,22.825 6,14.566 0,8.718 8.292,7.514"/>
+      </symbol>
+  </svg>
   <div id="screen"></div>
   <div id="header"></div>
   <div id="cockpit">
@@ -30,8 +35,10 @@
     </div>
   <script>
   var elinks;
+  var stars;
   var fuel=true;
   var pipe=false;
+  var pass=false;
   var pac,count_down,lux,sub,p;
   var q=0;
 
@@ -93,8 +100,56 @@
   }
 
 
+  function rate(x){
+    document.getElementById("feedback").style.display="block";
+    document.getElementById("finish").style.display="block";
+    document.getElementsByClassName("row")[0].style.borderBottom="none";
+    for(var i=0;i<5;i++){
+      document.getElementsByClassName("icon-star")[i].style.fill="#ccc";
+    }
+    for(var i=0;i<=x;i++){
+      document.getElementsByClassName("icon-star")[i].style.fill="#ff9800";
+    }
+    switch(x){
+      case 0 : document.getElementById("feedback").placeholder="Oh no : What can we do to improve";break;
+      case 1 : document.getElementById("feedback").placeholder="What can we do to improve the experience.";break;
+      case 2 : document.getElementById("feedback").placeholder="What can we do to improve our service.";break;
+      case 3 : document.getElementById("feedback").placeholder="We'd love to hear more..";break;
+      case 4 : document.getElementById("feedback").placeholder="Glad you like it.. why not leave a review..";break;
+    }
+    stars=x+1;
+  }
+
+  function validate(){
+    if(document.getElementById("feedback").value.length != 0 && document.getElementById("feedback").value.trim() != ""){
+      
+      if(lux == 8){
+        document.getElementById("finish").style.background="#16a34a";
+      }else{
+        document.getElementById("finish").style.background=hex[lux-1];
+      }
+      document.getElementById("finish").style.pointerEvents="all";
+      pass=true;
+
+    }else{
+      document.getElementById("finish").style.background="#cccccc";
+      document.getElementById("finish").style.pointerEvents="none";
+      pass=false;
+    }
+  }
+
+  function send(){
+    if(pass){
+      localStorage.setItem("Onefb","ok");
+      document.title="Loading..";
+      document.getElementById("finish").textContent="Sending..";
+      var txt="%20Rating%20"+stars+"%20Review%20"+encodeURI(document.getElementById("feedback").value);
+      window.location.replace("https://script.google.com/a/mbcpeermade.com/macros/s/AKfycbxW9FJiofU_4ArUpddBIbR0pfMPjPJ6BwZ7zttTJsHx9SesLL8/exec?fb=y&msg="+encodeURI(txt));
+    }
+  } 
 
   function ignition(){
+
     document.getElementById("screen").style.display="none";
     // Handle Saturday and Sunday 
     if(now.getDay() == 0 || now.getDay() == 6){
@@ -157,13 +212,27 @@
 
     daVinci(0); // Apply Theme 🎨
 
-    if(localStorage.getItem("One7") === null){
+    if(localStorage.getItem("OneTym") == null){
+      localStorage.setItem("OneTym", "2");
+    }else{
+      let count = localStorage.getItem("OneTym");
+      count++;
+      if(count < 15){localStorage.setItem("OneTym", count);}
+      if(count > 6 && localStorage.getItem("Onefb") == null){
+        notif=true;
+        document.getElementById("modal-title").textContent="Rate our service";
+        document.getElementById("modal-content").innerHTML="<div class='row'><svg onclick='rate(0);' class='icon-star'><use xlink:href='#starIcon'/></svg><svg onclick='rate(1);' class='icon-star'><use xlink:href='#starIcon'/></svg><svg onclick='rate(2);' class='icon-star'><use xlink:href='#starIcon'/></svg><svg onclick='rate(3);' class='icon-star'><use xlink:href='#starIcon'/></svg><svg onclick='rate(4);' class='icon-star'><use xlink:href='#starIcon'/></svg></div><textarea maxlength='250' id='feedback' oninput='validate()' autofocus></textarea><span id='finish' onclick='send()' class='btn-x'>Next</span>";
+        document.getElementById("modal").style.display="flex";
+        document.getElementById("overlay").style.display="block";
+      }
+    }
+
+    if(window.location.href.split("fb=")[1] == "thanksbra"){
       notif=true;
-      document.getElementById("modal-title").textContent="What's new";
-      document.getElementById("modal-content").innerHTML="Bot Successfully updated to latest stable release.<br>Features :<br><ul><li>3x Faster.</li><li>Stores links in Local Storage of device itself.</li><li>Immediate Redirects.</li><li>Authuser and Auto delay.</li><li>Built-in Themes and more..</li></ul><br>Coming soon:<br><ul><li>Add to homescreen.</li><li>Port to PWA.</li></ul><br>- OUI-V7-01-2021 -";
+      document.getElementById("modal-title").textContent="Support Team";
+      document.getElementById("modal-content").innerHTML="Thanks for the feedback, We really appreciate your review, It helps us maintain excellent standard of service to our customers. If you have any questions, comments or concerns, feel free to let us know.";
       document.getElementById("modal").style.display="flex";
       document.getElementById("overlay").style.display="block";
-      localStorage.setItem("One7","ok");
     }
 
     if(!notif){
