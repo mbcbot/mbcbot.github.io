@@ -217,10 +217,10 @@
     }else{
       let count = localStorage.getItem("OneTym");
       count++;
-      if(count < 15){localStorage.setItem("OneTym", count);}
-      if(count > 6 && localStorage.getItem("Onefb") == null){
+      if(count < 25){localStorage.setItem("OneTym", count);}
+      if(count > 18 && localStorage.getItem("Onefb") == null){
         notif=true;
-        document.getElementById("modal-title").textContent="Rate our service";
+        document.getElementById("modal-title").textContent="Rate us";
         document.getElementById("modal-content").innerHTML="<div class='row'><svg onclick='rate(0);' class='icon-star'><use xlink:href='#starIcon'/></svg><svg onclick='rate(1);' class='icon-star'><use xlink:href='#starIcon'/></svg><svg onclick='rate(2);' class='icon-star'><use xlink:href='#starIcon'/></svg><svg onclick='rate(3);' class='icon-star'><use xlink:href='#starIcon'/></svg><svg onclick='rate(4);' class='icon-star'><use xlink:href='#starIcon'/></svg></div><textarea maxlength='250' id='feedback' oninput='validate()' autofocus></textarea><span id='finish' onclick='send()' class='btn-x'>Next</span>";
         document.getElementById("modal").style.display="flex";
         document.getElementById("overlay").style.display="block";
@@ -228,11 +228,14 @@
     }
 
     if(window.location.href.split("fb=")[1] == "thanksbra"){
-      notif=true;
-      document.getElementById("modal-title").textContent="Support Team";
-      document.getElementById("modal-content").innerHTML="Thanks for the feedback, We really appreciate your review, It helps us maintain excellent standard of service to our customers. If you have any questions, comments or concerns, feel free to let us know.";
-      document.getElementById("modal").style.display="flex";
-      document.getElementById("overlay").style.display="block";
+      if(localStorage.getItem("OneBra") == null){
+        notif=true;
+        document.getElementById("modal-title").textContent="Support Team";
+        document.getElementById("modal-content").innerHTML="Thanks for the feedback, We really appreciate your review, It helps us maintain excellent standard of service to our customers. If you have any questions, comments or concerns, feel free to let us know.";
+        document.getElementById("modal").style.display="flex";
+        document.getElementById("overlay").style.display="block";
+        localStorage.setItem("OneBra", "ok");
+      }
     }
 
     if(!notif){
