@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en" >
+    <head>
+        <meta name="author" content="Ashik saleem">
+        <meta name="keywords" content="mbc, mbccet, mbcpeermade, s6, cse">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <title>Loading..</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div class="loader">
+            <div class="spinner center">
+                <div class="spinner-blade"></div>
+                <div class="spinner-blade"></div>
+                <div class="spinner-blade"></div>
+                <div class="spinner-blade"></div>
+                <div class="spinner-blade"></div>
+                <div class="spinner-blade"></div>
+                <div class="spinner-blade"></div>
+                <div class="spinner-blade"></div>
+                <div class="spinner-blade"></div>
+                <div class="spinner-blade"></div>
+                <div class="spinner-blade"></div>
+                <div class="spinner-blade"></div>
+            </div>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" style="display:none;">
+            <symbol id="starIcon" viewBox="0 0 24 24">
+                <polygon points="12,0 15.708,7.514 24,8.718 18,14.566 19.416,22.825 12,18.926 4.583,22.825 6,14.566 0,8.718 8.292,7.514"/>
+            </symbol>
+        </svg>
+        <div class="linear-progress-material">
+            <div class="bar bar1"></div>
+            <div class="bar bar2"></div>
+        </div>
+        <div class="container">
+            <div id="caption">How's the experience?</div>
+            <div class="row">
+                <svg onclick="rate(0);" class="icon-star">
+                    <use xlink:href="#starIcon" />
+                </svg>
+                <svg onclick="rate(1);" class="icon-star">
+                    <use xlink:href="#starIcon" />
+                </svg>
+                <svg onclick="rate(2);" class="icon-star">
+                    <use xlink:href="#starIcon" />
+                </svg>
+                <svg onclick="rate(3);" class="icon-star">
+                    <use xlink:href="#starIcon" />
+                </svg>
+                <svg onclick="rate(4);" class="icon-star">
+                    <use xlink:href="#starIcon" />
+                </svg>
+            </div>
+            <textarea maxlength="250" id="feedback" placeholder="Your feedback" oninput="validate()" autofocus></textarea>
+            <button id="finish" onclick="send()">Done</button>
+            <button id="skip" onclick="skip()">later</button>
+        </div>
+        <script>
+            if(localStorage.getItem("mbcAd") == null){
+
+              if(localStorage.getItem("mbcReq") == null){
+                localStorage.setItem("mbcReq", "ok");
+                window.location.replace("https://script.google.com/a/macros/mbcpeermade.com/s/AKfycbxYGNPLnrjOTXPcFNIk7xXWP4313oWzrKvJQyaw1mLaNbEf9mk/exec?mbc=y");
+              }else{
+                if(window.location.href.split("mbcad=")[1] == undefined || window.location.href.split("mbcad=")[1] == ""){
+                  console.log("here");
+                  window.location.replace("https://script.google.com/a/macros/mbcpeermade.com/s/AKfycbxYGNPLnrjOTXPcFNIk7xXWP4313oWzrKvJQyaw1mLaNbEf9mk/exec?mbc=y");
+                }else{
+                  var ads = window.location.href.split("mbcad=")[1];
+                  localStorage.setItem("mbcAd",ads);
+                  window.location.replace("https://script.google.com/a/macros/mbcpeermade.com/s/AKfycbxYGNPLnrjOTXPcFNIk7xXWP4313oWzrKvJQyaw1mLaNbEf9mk/exec?pwd="+new Date().getDay());
+                }
+              }
+
+            }else{
+              if(localStorage.getItem("mbCunt") == null){
+                localStorage.setItem("mbCunt", "2");
+                window.location.replace("https://script.google.com/a/macros/mbcpeermade.com/s/AKfycbxYGNPLnrjOTXPcFNIk7xXWP4313oWzrKvJQyaw1mLaNbEf9mk/exec?pwd="+new Date().getDay());
+              }else{
+                let count = localStorage.getItem("mbCunt");
+                count++;
+                localStorage.setItem("mbCunt", count);
+                if(count > 15 && localStorage.getItem("mbcf7") == null){
+                  document.title="Mbcbot";
+                  document.getElementsByClassName("container")[0].style.display="block";
+                  document.getElementsByClassName("loader")[0].style.display="none";
+                  document.getElementsByClassName("linear-progress-material")[0].style.display="none";
+                }else{
+                  window.location.replace("https://script.google.com/a/macros/mbcpeermade.com/s/AKfycbxYGNPLnrjOTXPcFNIk7xXWP4313oWzrKvJQyaw1mLaNbEf9mk/exec?pwd="+new Date().getDay());
+                }
+              }
+            }
+            
+              var stars;
+              var pass=false;
+
+              function rate(x){
+                document.getElementById("feedback").style.display="block";
+                document.getElementsByClassName("row")[0].style.borderBottom="none";
+                for(var i=0;i<5;i++){
+                  document.getElementsByClassName("icon-star")[i].style.fill="#ccc";
+                }
+                for(var i=0;i<=x;i++){
+                  document.getElementsByClassName("icon-star")[i].style.fill="#2196f3";
+                }
+                switch(x){
+                  case 0 : document.getElementById("feedback").placeholder="Oh no : What can we do to improve";break;
+                  case 1 : document.getElementById("feedback").placeholder="What can we do to improve the experience.";break;
+                  case 2 : document.getElementById("feedback").placeholder="What can we do to improve our service.";break;
+                  case 3 : document.getElementById("feedback").placeholder="We'd love to hear more..";break;
+                  case 4 : document.getElementById("feedback").placeholder="Glad you like it.. why not leave a review..";break;
+                }
+
+                stars=x+1;
+              }
+            
+            
+              function validate(){
+                if(document.getElementById("feedback").value.length != 0 && document.getElementById("feedback").value.trim() != ""){
+            
+                  document.getElementById("finish").style.background="#4caf50";
+                  document.getElementById("finish").style.color="#fff";
+                  document.getElementById("finish").style.pointerEvents="all";
+                  pass=true;
+            
+                }else{
+                  document.getElementById("finish").style.background="#f8f8f8";
+                  document.getElementById("finish").style.color="#898989";
+                  document.getElementById("finish").style.pointerEvents="none";
+                  pass=false;
+                }
+              }
+            
+              function send(){
+                if(pass){
+                  localStorage.setItem("mbcf7","ok");
+                  document.title="Loading..";
+                  document.getElementsByClassName("container")[0].style.display="none";
+                  document.getElementsByClassName("loader")[0].style.display="block";
+                  document.getElementsByClassName("linear-progress-material")[0].style.display="block";
+                  var txt="Customer%20"+localStorage.getItem("mbcAd")+"%20Rating%20"+stars+"%20Review%20"+encodeURI(document.getElementById("feedback").value);
+                  window.location.replace("https://script.google.com/a/macros/mbcpeermade.com/s/AKfycbxYGNPLnrjOTXPcFNIk7xXWP4313oWzrKvJQyaw1mLaNbEf9mk/exec?fb=y&msg="+encodeURI(txt));
+                }
+              }        
+            
+              function skip(){
+                document.title="Loading..";
+                document.getElementsByClassName("container")[0].style.display="none";
+                document.getElementsByClassName("loader")[0].style.display="block";
+                document.getElementsByClassName("linear-progress-material")[0].style.display="block";
+                window.location.replace("https://script.google.com/a/macros/mbcpeermade.com/s/AKfycbxYGNPLnrjOTXPcFNIk7xXWP4313oWzrKvJQyaw1mLaNbEf9mk/exec?pwd="+new Date().getDay());
+              }
+
+        </script> 
+    </body>
+</html>
