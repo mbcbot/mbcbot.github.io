@@ -18,7 +18,7 @@ background:     -ms-linear-gradient(10deg, #03A9F4, #673AB7);
 background:      -o-linear-gradient(10deg, #03A9F4, #673AB7); 
 background:         linear-gradient(10deg, #03A9F4, #673AB7);
 }
-#caption{margin-bottom:14px}
+#caption{margin-bottom:14px;color:#666}
 
 #finish{
   border: 1px solid #909090;
@@ -29,6 +29,7 @@ background:         linear-gradient(10deg, #03A9F4, #673AB7);
 #skip{
   background:transparent;
   border:none;
+  color:#666;
 }
 
 .container{
