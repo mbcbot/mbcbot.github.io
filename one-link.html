@@ -111,7 +111,7 @@
       document.getElementsByClassName("icon-star")[i].style.fill="#ff9800";
     }
     switch(x){
-      case 0 : document.getElementById("feedback").placeholder="Oh no : What can we do to improve";break;
+      case 0 : document.getElementById("feedback").placeholder="Oh no :( What can we do to improve";break;
       case 1 : document.getElementById("feedback").placeholder="What can we do to improve the experience.";break;
       case 2 : document.getElementById("feedback").placeholder="What can we do to improve our service.";break;
       case 3 : document.getElementById("feedback").placeholder="We'd love to hear more..";break;
@@ -156,11 +156,11 @@
       fuel=false;     // Stop Auto-launch 🚀
       sub=Monday[0];  // Select First Period.
       document.getElementById("header").innerHTML="Monday<div id='dot'></div><span id='clk'>9:00 AM</span>";
-      document.getElementById("timeline").innerHTML="<button id='spinner'></button><button class='fill'>"+Monday[0]+"</button><div class='wire'></div>";
+      document.getElementById("timeline").innerHTML="<button title='click to join' onclick='Mars(this)' id='spinner'>"+Monday[0]+"</button><button title='click to join' onclick='Mars(this)' class='fill'>"+Monday[0]+"</button><div class='wire'></div>";
 
       // Timeline-Painter 🖌
       for(var i=1;i<5;i++){
-        document.getElementById("timeline").innerHTML+="<button class='empty'>"+Monday[i]+"</button>";
+        document.getElementById("timeline").innerHTML+="<button title='click to join' onclick='Mars(this)' class='empty'>"+Monday[i]+"</button>";
         if(i != 4){ 
           document.getElementById("timeline").innerHTML+="<div class='wire'></div>";
         }
@@ -208,7 +208,7 @@
         }
       }
     }
-    document.getElementById("timeline").innerHTML+="<div id='caption'>Redirecting in <span id='timer'>7</span> Seconds..</div>";
+    document.getElementById("timeline").innerHTML+="<div id='caption'>Redirecting in <span id='timer'> - </span> Seconds..</div>";
 
     daVinci(0); // Apply Theme 🎨
 
@@ -296,7 +296,7 @@
 
   function scrub(){
     document.getElementById("cockpit").innerHTML="<i class='material-icons' onclick='view()'>segment</i><i id='help' class='material-icons' onclick='about()'>help_outline</i>";
-    document.getElementById("caption").innerHTML="Mbcbot © 2018 - 2022 | <a href='https://github.com/mbcbot/mbcbot.github.io'>Ver 7.0.1 </a>";
+    document.getElementById("caption").innerHTML="TIP: Tap the Rings to join faster..";
     document.getElementById("caption").style.fontSize="14px";
     document.title = "One Link";
     if(lux == 1 || lux == 8){
