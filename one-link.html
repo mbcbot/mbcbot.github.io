@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap">
   <link rel="icon" href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/lg/57/link-symbol_1f517.png">
-  <link rel="stylesheet" href="css/ghost.css">
+  <link rel="stylesheet" href="css/ghost_1.0.css">
 </head>
 
 <body onload="bios()">
@@ -217,8 +217,8 @@
     }else{
       let count = localStorage.getItem("OneTym");
       count++;
-      if(count < 25){localStorage.setItem("OneTym", count);}
-      if(count > 18 && localStorage.getItem("Onefb") == null){
+      if(count < 8){localStorage.setItem("OneTym", count);}
+      if(count > 5 && localStorage.getItem("Onefb") == null){
         notif=true;
         document.getElementById("modal-title").textContent="Rate us";
         document.getElementById("modal-content").innerHTML="<div class='row'><svg onclick='rate(0);' class='icon-star'><use xlink:href='#starIcon'/></svg><svg onclick='rate(1);' class='icon-star'><use xlink:href='#starIcon'/></svg><svg onclick='rate(2);' class='icon-star'><use xlink:href='#starIcon'/></svg><svg onclick='rate(3);' class='icon-star'><use xlink:href='#starIcon'/></svg><svg onclick='rate(4);' class='icon-star'><use xlink:href='#starIcon'/></svg></div><textarea maxlength='250' id='feedback' oninput='validate()' autofocus></textarea><span id='finish' onclick='send()' class='btn-x'>Next</span>";
