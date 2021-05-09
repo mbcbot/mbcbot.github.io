@@ -95,14 +95,14 @@
                 localStorage.setItem("ufcAd",s2);
                 localStorage.setItem("ufcData",s3);
 
-                document.getElementById("player1").src="http://mbccet.com/img_small/"+s2+".jpg";
+                document.getElementById("player1").src="https://images.weserv.nl/?url=http://mbccet.com/img_small/"+s2+".jpg";
                 document.getElementById("screen").style.display="none";
 
               }else if(s1 == "b"){
                 // Part B
                 ad=localStorage.getItem("ufcAd");
-                document.getElementById("player1").src="http://mbccet.com/img_small/"+ad+".jpg";
-                document.getElementById("referee").src="http://mbccet.com/img_small/"+s2+".jpg";
+                document.getElementById("player1").src="https://images.weserv.nl/?url=http://mbccet.com/img_small/"+ad+".jpg";
+                document.getElementById("referee").src="https://images.weserv.nl/?url=http://mbccet.com/img_small/"+s2+".jpg";
 
                 document.getElementById("player2").style.display="none";
                 document.getElementById("referee").style.display="block";
@@ -208,7 +208,7 @@
           function fight(y){
             if(y  == 0){
               document.getElementById("player2").style.display="none";
-              document.getElementById("referee").src="http://mbccet.com/img_small/"+Opponent+".jpg";
+              document.getElementById("referee").src="https://images.weserv.nl/?url=http://mbccet.com/img_small/"+Opponent+".jpg";
               document.getElementById("referee").style.display="block";
               document.getElementById("finish").textContent="Done";
               document.getElementById("finish").setAttribute("onclick","fight(1)");
