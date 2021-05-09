@@ -105,11 +105,38 @@ img{
   width:150px;
   padding:7px;
 }
+#spinr{
+  user-select: none;
+  display:none;
+  border: 6px solid #6c7ae0;
+  border-radius: 50%;
+  border-top: 6px solid transparent;
+  width: 75px;
+  height: 75px;
+  -webkit-animation: spin .7s linear infinite;
+  animation: spin .7s linear infinite;
+}
 .vs{
   margin: 0 40px;
   font-size: 24px;
   font-weight:bold;
   color: #6c7ae0;
+}
+@keyframes spin {
+  0% {
+    transform:rotate(0deg);
+  }
+  100% {
+    transform:rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  0% {
+    transform:rotate(0deg);
+  }
+  100% {
+    transform:rotate(360deg);
+  }
 }
 @keyframes xpand {
   0% {
@@ -162,22 +189,20 @@ img{
   }
 }
 
-@media (max-width: 600px) {
-  img{width:80px}
-}
+
 @media (max-width: 500px) {
-  img{width:60px}
+  img{width:70px}
   #player2{width:100px}
+  #spinr{width:60px;height:60px}
 }
 @media (max-width: 400px) {
-  img{width:40px}
+  img{width:65px}
   #player2{width:100px}
-  .row{padding:25px 15px 25px 15px}
+  #spinr{width:50px;height:50px}
   .vs{margin:0 35px;font-size:20px;}
 }
-@media (max-width: 350px) {
-  img{width:35px}
+@media (max-width: 370px) {
+  img{width:50px}
   #player2{width:70px}
-  .row{padding:25px 15px 25px 15px}
   .vs{margin:0 30px;}
 }

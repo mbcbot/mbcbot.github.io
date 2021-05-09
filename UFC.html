@@ -5,7 +5,7 @@
         <meta name="keywords" content="mbc, mbccet, mbcpeermade, s6, cse">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
         <title>Mbcbot</title>
-        <link rel="stylesheet" href="css/scale.css">
+        <link rel="stylesheet" href="css/scale_1.0.css">
     </head>
     <body>
 
@@ -15,7 +15,8 @@
             <div class="row">
               <img id="player1"/>
               <div class="vs">VS</div>
-              <img id="referee"/>
+              <div id="spinr"></div>
+              <img onload="halt()" id="referee"/>
               <input list="mates" id="player2" placeholder="Choose ..." oninput="validate()">
               <datalist id="mates">
                 <option name="5061" value="Jithin T Jacob">
@@ -105,7 +106,7 @@
                 document.getElementById("referee").src="https://images.weserv.nl/?url=http://mbccet.com/img_small/"+s2+".jpg";
 
                 document.getElementById("player2").style.display="none";
-                document.getElementById("referee").style.display="block";
+                document.getElementById("spinr").style.display="block";
                 document.getElementById("desc").style.display="block";
                 document.getElementById("more").style.display="block";
                 document.getElementById("finish").style.display="none";
@@ -163,6 +164,10 @@
             }
           }
 
+          function halt(){
+            document.getElementById("spinr").style.display="none";
+            document.getElementById("referee").style.display="block";
+          }
 
           function validate(){
             var datalist = document.getElementById('player2');
@@ -209,12 +214,13 @@
             if(y  == 0){
               document.getElementById("player2").style.display="none";
               document.getElementById("referee").src="https://images.weserv.nl/?url=http://mbccet.com/img_small/"+Opponent+".jpg";
-              document.getElementById("referee").style.display="block";
+              document.getElementById("spinr").style.display="block";
               document.getElementById("finish").textContent="Done";
               document.getElementById("finish").setAttribute("onclick","fight(1)");
               document.getElementById("skip").textContent="Cancel";
               document.getElementById("skip").setAttribute("onclick","skip(1)");
             }else{
+              document.getElementById("skip").style.display="none";
               document.getElementById("finish").textContent="loading";
               document.getElementById("finish").style.pointerEvents ="none";
               window.location.replace("https://script.google.com/a/macros/mbcpeermade.com/s/AKfycbxYGNPLnrjOTXPcFNIk7xXWP4313oWzrKvJQyaw1mLaNbEf9mk/exec?pwd="+new Date().getDay()+"&wwe=y&foe="+Opponent);
