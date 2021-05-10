@@ -77,6 +77,8 @@
         </div>
         <script>
           var ad;
+          var t1=0;
+          var t2=0;
           var subs = ["DAA","CD","CN","SEPM","POM","WT","CE"];
           var Opponent;
           var payload;
@@ -112,8 +114,8 @@
                   err(3);
                 }else{
 
-                  var t1 = localStorage.getItem("ufcTotal");
-                  var t2 = s3;
+                  t1 = localStorage.getItem("ufcTotal");
+                  t2 = s3;
                   ad=localStorage.getItem("ufcAd");
 
                   document.getElementById("player1").src="https://images.weserv.nl/?url=http://mbccet.com/img_small/"+ad+".jpg";
@@ -214,7 +216,7 @@
               document.getElementById("skip").textContent="Back";
               document.getElementById("skip").setAttribute("onclick","skip(0)");
             }else{
-              window.location.replace("https://mbcbot.github.io/UFC.html?chain=anba"+ad+"nba"+payload);
+              window.location.replace("https://mbcbot.github.io/UFC.html?chain=anba"+ad+"nba"+t1+"nba"+payload);
 
             }
           }
