@@ -143,7 +143,7 @@
       localStorage.setItem("Onefb","ok");
       document.title="Loading..";
       document.getElementById("finish").textContent="Sending..";
-      var txt="%20Rating%20"+stars+"%20Review%20"+encodeURI(document.getElementById("feedback").value);
+      var txt="%0ARating%20"+stars+"%0ADelay%20"+count_down+"%0ATheme%20"+lux+"%0AReview%20"+encodeURI(document.getElementById("feedback").value);
       window.location.replace("https://script.google.com/a/mbcpeermade.com/macros/s/AKfycbxW9FJiofU_4ArUpddBIbR0pfMPjPJ6BwZ7zttTJsHx9SesLL8/exec?fb=y&msg="+encodeURI(txt));
     }
   } 

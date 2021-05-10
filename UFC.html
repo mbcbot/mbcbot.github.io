@@ -4,7 +4,7 @@
         <meta name="author" content="Ashik saleem">
         <meta name="keywords" content="mbc, mbccet, mbcpeermade, s6, cse">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-        <title>Mbcbot</title>
+        <title>Mbcbot Comparator</title>
         <link rel="stylesheet" href="css/scale_2.0.css">
     </head>
     <body>
@@ -19,28 +19,28 @@
               <img onload="halt()" id="referee"/>
               <input list="mates" id="player2" placeholder="Choose ..." oninput="validate()">
               <datalist id="mates">
-                <option name="5061" value="Jithin T Jacob">
-                <option name="5058" value="Don Joseph">
                 <option name="5048" value="Abin oommen">
                 <option name="5049" value="Afraim Joseph">
+                <option name="5050" value="Aibin Thomas Mathew">
                 <option name="5047" value="Ajith M James">
+                <option name="5051" value="Akash C Babu">
                 <option name="5052" value="Amal Santhosh">
                 <option name="5053" value="Amina ubaid">
-                <option name="5174" value="Astin kurien siby">
-                <option name="5173" value="Leon James">
-                <option name="5059" value="Ebinu suneer">
-                <option name="4983" value="Ashik saleem">
-                <option name="4968" value="Emil Jacob John">
-                <option name="5050" value="Aibin Thomas Mathew">
-                <option name="5051" value="Akash C Babu">
                 <option name="5055" value="Ansu Sara Shajan">
+                <option name="4983" value="Ashik saleem">
+                <option name="5174" value="Astin kurien siby">
                 <option name="5056" value="Athul Baby">
+                <option name="5058" value="Don Joseph">
+                <option name="5059" value="Ebinu suneer">
+                <option name="4968" value="Emil Jacob John">
                 <option name="5060" value="Jeffery Thomas Paul">
                 <option name="5175" value="Jisha Varghese">
+                <option name="5061" value="Jithin T Jacob">
                 <option name="5062" value="Jitin Joby">
                 <option name="5063" value="Joel Jacob">
                 <option name="5064" value="Joel Mathews">
                 <option name="5178" value="Kripa Mariam Sunny">
+                <option name="5173" value="Leon James">
                 <option name="5176" value="Loriene Brighty Kishore">
                 <option name="4972" value="Prince Babu">
                 <option name="5066" value="Richy Thampi">
@@ -48,6 +48,7 @@
                 <option name="5067" value="Rohan Moses">
                 <option name="5068" value="Rony Zacharia George">
                 <option name="5065" value="Rosemary Scaria">
+                <option name="5069" value="Sandra Ann Sunny">
                 <option name="4995" value="Shalu Merin John">
                 <option name="5070" value="Sharon P Raju">
                 <option name="5073" value="Shijin George Stephen">
@@ -55,10 +56,9 @@
                 <option name="5075" value="Sijo John Thomas">
                 <option name="5076" value="Sneha Mariam Chacko">
                 <option name="5077" value="Solamon J Purackan">
+                <option name="5078" value="Soumya M S">
                 <option name="4969" value="Tibin Sunny">
                 <option name="5278" value="Ajith Rajan">
-                <option name="5069" value="Sandra Ann Sunny">
-                <option name="5078" value="Soumya M S">
               </datalist>
 
             </div>
@@ -85,81 +85,91 @@
             err(1);
           }else{
             var chain=window.location.href.split("chain=")[1];
-            var s1=chain.split("nba")[0];
-            var s2=chain.split("nba")[1];
-            var s3=chain.split("nba")[2];
-            if(s1 == "" || s1 == undefined || s2 == "" || s2 == undefined || s3 == "" || s3 == undefined ){
+            var s1=chain.split("nba")[0]; // Part : a/b
+            var s2=chain.split("nba")[1]; // Admsn No. : 4983
+            var s3=chain.split("nba")[2]; // Total : 99.9
+            var s4=chain.split("nba")[3]; // Chain : 100x100x...x
+
+            if(s1 == "" || s1 == undefined || s2 == "" || s2 == undefined || s3 == "" || s3 == undefined  || s4 == "" || s4 == undefined ){
               err(2);
             }else{
               if(s1 == "a"){
                 // Part A
+                // UFC.html?chain=anba4983nba99.9nba82.35x90.48x87.5x90x93.33x94.12x100x
+
                 localStorage.setItem("ufcAd",s2);
-                localStorage.setItem("ufcData",s3);
+                localStorage.setItem("ufcTotal",s3);
+                localStorage.setItem("ufcData",s4);
 
                 document.getElementById("player1").src="https://images.weserv.nl/?url=http://mbccet.com/img_small/"+s2+".jpg";
                 document.getElementById("screen").style.display="none";
 
               }else if(s1 == "b"){
                 // Part B
-                ad=localStorage.getItem("ufcAd");
-                document.getElementById("player1").src="https://images.weserv.nl/?url=http://mbccet.com/img_small/"+ad+".jpg";
-                document.getElementById("referee").src="https://images.weserv.nl/?url=http://mbccet.com/img_small/"+s2+".jpg";
+                // UFC.html?chain=bnba5174nba90.1nba58.82x90.48x87.5x95x80x88.24x66.67x
 
-                document.getElementById("player2").style.display="none";
-                document.getElementById("spinr").style.display="block";
-                document.getElementById("desc").style.display="block";
-                document.getElementById("more").style.display="block";
-                document.getElementById("finish").style.display="none";
-                document.getElementById("skip").setAttribute("onclick","skip(2)");
-                document.getElementById("screen").style.display="none";
-  
-
-                payload=localStorage.getItem("ufcData");
-
-                var c1=payload.split("x");
-                var c2=s3.split("x");
-                var t1=0;
-                var t2=0;
-                var txt1;
-                var txt2;
-                for(var i=0;i<7;i++){
-                  t1=parseInt(t1)+parseInt(c1[i]);
-                  t2=parseInt(t2)+parseInt(c2[i]);
-
-                  if(c1[i] > 89){txt1="<td>"+c1[i]+"</td>";}
-                  else if(c1[i] > 76){txt1="<td>"+c1[i]+"</td>";}
-                  else{txt1="<td class='red'>"+c1[i]+"</td>";}
-
-                  if(c2[i] > 89){txt2="<td>"+c2[i]+"</td>";}
-                  else if(c2[i] > 76){txt2="<td>"+c2[i]+"</td>";}
-                  else{txt2="<td class='red'>"+c2[i]+"</td>";}
-
-                  document.getElementById("marks").innerHTML+="<tr>"+txt1+"<td>"+subs[i]+"</td>"+txt2+"</tr>";
-                }
-                t1=Math.round(t1/7);
-                t2=Math.round(t2/7);
-                document.getElementById("total").innerHTML+="<tr><td>"+t1+"%</td><td>"+t2+"%</td></tr><tr><td></td><td></td></tr>";
-
-                if(t1  == t2){
-                  document.getElementById("caption").innerHTML="Equal Attendence";
-                }else if(t1 > t2){
-                  document.getElementById("player1").style.transform="scale(1.1)";
-                  document.getElementById("player1").style.animation="1s win 1";
-                  document.getElementById("referee").style.transform="scale(0.8)";
-                  document.getElementById("referee").style.animation="1s nxt 1";
-                  document.getElementById("caption").innerHTML="Leading by "+(t1-t2)+"%<span class='green'>▲</span>";
-
+                if(localStorage.getItem("ufcAd") == null || localStorage.getItem("ufcTotal") == null || localStorage.getItem("ufcData") == null){
+                  err(3);
                 }else{
-                  document.getElementById("player1").style.transform="scale(0.8)";
-                  document.getElementById("player1").style.animation="1s nxt 1";
-                  document.getElementById("referee").style.transform="scale(1.1)";
-                  document.getElementById("referee").style.animation="1s win 1";
-                  document.getElementById("caption").innerHTML="Behind by "+(t2-t1)+"%<span class='red'>▼</span>";
 
+                  var t1 = localStorage.getItem("ufcTotal");
+                  var t2 = s3;
+                  ad=localStorage.getItem("ufcAd");
+
+                  document.getElementById("player1").src="https://images.weserv.nl/?url=http://mbccet.com/img_small/"+ad+".jpg";
+                  document.getElementById("referee").src="https://images.weserv.nl/?url=http://mbccet.com/img_small/"+s2+".jpg";
+
+                  document.getElementById("player2").style.display="none";
+                  document.getElementById("spinr").style.display="block";
+                  document.getElementById("desc").style.display="block";
+                  document.getElementById("more").style.display="block";
+                  document.getElementById("finish").style.display="none";
+                  document.getElementById("skip").setAttribute("onclick","skip(2)");
+                  document.getElementById("screen").style.display="none";
+
+                  payload=localStorage.getItem("ufcData");
+
+                  var c1=payload.split("x");
+                  var c2=s4.split("x");
+
+                  var txt1;
+                  var txt2;
+                  for(var i=0;i<7;i++){
+
+                    if(c1[i] > 89){txt1="<td>"+c1[i]+"</td>";}
+                    else if(c1[i] > 76){txt1="<td>"+c1[i]+"</td>";}
+                    else{txt1="<td class='red'>"+c1[i]+"</td>";}
+
+                    if(c2[i] > 89){txt2="<td>"+c2[i]+"</td>";}
+                    else if(c2[i] > 76){txt2="<td>"+c2[i]+"</td>";}
+                    else{txt2="<td class='red'>"+c2[i]+"</td>";}
+
+                    document.getElementById("marks").innerHTML+="<tr>"+txt1+"<td>"+subs[i]+"</td>"+txt2+"</tr>";
+                  }
+
+                  document.getElementById("total").innerHTML+="<tr><td>"+t1+"%</td><td>"+t2+"%</td></tr><tr><td></td><td></td></tr>";
+
+                  if(t1  == t2){
+                    document.getElementById("caption").innerHTML="Equal Attendence";
+                  }else if(t1 > t2){
+                    document.getElementById("player1").style.transform="scale(1.1)";
+                    document.getElementById("player1").style.animation="1s win 1";
+                    document.getElementById("referee").style.transform="scale(0.8)";
+                    document.getElementById("referee").style.animation="1s nxt 1";
+                    document.getElementById("caption").innerHTML="Leading by "+Math.round(t1-t2)+"%<span class='green'>▲</span>";
+
+                  }else{
+                    document.getElementById("player1").style.transform="scale(0.8)";
+                    document.getElementById("player1").style.animation="1s nxt 1";
+                    document.getElementById("referee").style.transform="scale(1.1)";
+                    document.getElementById("referee").style.animation="1s win 1";
+                    document.getElementById("caption").innerHTML="Behind by "+Math.round(t2-t1)+"%<span class='red'>▼</span>";
+
+                  }
                 }
 
               }else{
-                err(3);
+                err(4);
               }
             }
           }
