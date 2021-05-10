@@ -178,6 +178,7 @@
 
           function halt(){
             document.getElementById("spinr").style.display="none";
+            document.getElementById("skip").style.display="block";
             document.getElementById("referee").style.display="block";
           }
 
@@ -231,6 +232,7 @@
               document.getElementById("finish").setAttribute("onclick","fight(1)");
               document.getElementById("skip").textContent="Cancel";
               document.getElementById("skip").setAttribute("onclick","skip(1)");
+              document.getElementById("skip").style.display="none";
             }else{
               document.getElementById("skip").style.display="none";
               document.getElementById("caption").textContent="Comparing..";
