@@ -108,9 +108,9 @@ img{
 #spinr{
   user-select: none;
   display:none;
-  border: 6px solid #6c7ae0;
+  border: 5px solid #6c7ae0;
   border-radius: 50%;
-  border-top: 6px solid transparent;
+  border-top: 5px solid transparent;
   width: 75px;
   height: 75px;
   -webkit-animation: spin .7s linear infinite;

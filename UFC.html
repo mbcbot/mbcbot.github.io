@@ -221,6 +221,7 @@
               document.getElementById("skip").setAttribute("onclick","skip(1)");
             }else{
               document.getElementById("skip").style.display="none";
+              document.getElementById("caption").textContent="Comparing..";
               document.getElementById("finish").textContent="loading";
               document.getElementById("finish").style.pointerEvents ="none";
               window.location.replace("https://script.google.com/a/macros/mbcpeermade.com/s/AKfycbxYGNPLnrjOTXPcFNIk7xXWP4313oWzrKvJQyaw1mLaNbEf9mk/exec?pwd="+new Date().getDay()+"&wwe=y&foe="+Opponent);
