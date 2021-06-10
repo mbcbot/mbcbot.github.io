@@ -169,7 +169,7 @@
 
   function launch(){
     var clock=setInterval(function(){
-      if(count_down>0){count_down--;}
+      if(fuel && count_down>0){count_down--;}
       document.title = "Redirecting in "+count_down+" Seconds";
       document.getElementById("timer").textContent=count_down;
       document.getElementById("count").textContent=count_down;
