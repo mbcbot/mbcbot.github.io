@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap">
   <link rel="icon" href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/lg/57/link-symbol_1f517.png">
-  <link rel="stylesheet" href="css/ghost_3.0.css">
+  <link rel="stylesheet" href="css/ghost_4.0.css">
 </head>
 
 <body onload="bios()">
@@ -23,7 +23,7 @@
   <div id="header"></div>
   <div id="cockpit">
     <span id="count">-</span>
-    <i id="close" class="material-icons" onclick="fuel=false;">close</i>
+    <i id="close" class="material-icons pb" onclick="fuel=false;">close</i>
   </div>
   <div id="timeline"></div>
 
@@ -112,7 +112,7 @@
           document.getElementById("timeline").innerHTML+="<div class='wire'></div>";
         }
       }
-      document.getElementById("cockpit").innerHTML="<i class='material-icons' onclick='view()'>segment</i><i id='help' class='material-icons' onclick='about()'>help_outline</i>";
+      document.getElementById("cockpit").innerHTML="<i class='material-icons pd' onclick='view()'>segment</i><i id='help' class='material-icons pd' onclick='about()'>help_outline</i>";
     }else{
       // Handle Rest of the days [M-T-W-Th-F]
       document.getElementById("header").innerHTML=now.toLocaleString('en-us',{weekday:'long'})+"<div id='dot'></div><span id='clk'>"+now.toLocaleString('en-us',{hour:'numeric',minute:'numeric',hour12:true})+"</span>";
@@ -207,7 +207,7 @@
 
 
   function scrub(){
-    document.getElementById("cockpit").innerHTML="<i class='material-icons' onclick='view()'>segment</i><i id='help' class='material-icons' onclick='about()'>help_outline</i>";
+    document.getElementById("cockpit").innerHTML="<i class='material-icons pd' onclick='view()'>segment</i><i id='help' class='material-icons pd' onclick='about()'>help_outline</i>";
     document.getElementById("caption").innerHTML="TIP: Tap the Rings to join faster..";
     document.getElementById("caption").style.fontSize="14px";
     document.title = "One Link";
@@ -306,24 +306,28 @@
     if(lux == 8){
       document.getElementById("header").style.color="#000";
       document.getElementById("cockpit").style.color="#000";
+      document.getElementById("cockpit").setAttribute("class","rev");
+      document.getElementById("modal").setAttribute("class","rev");
       document.getElementById("modal-title").style.color="#000";
       document.getElementById("modal-close").style.color="#000";
 
       var el1 = document.querySelectorAll(".pvc");
-      for (var i = 0; i < el1.length; i++){el1[i].style.background="#000";}
+      for (var i = 0; i < el1.length; i++){el1[i].style.background="#000";el1[i].style.borderColor="#000";}
       var el2 = document.querySelectorAll(".fill");
       for (var i = 0; i < el2.length; i++){el2[i].style.background="#000";el2[i].style.color="#fff";}
 
     }else{
       document.getElementById("header").style.color="#fff";
       document.getElementById("cockpit").style.color="#fff";
+      document.getElementById("cockpit").setAttribute("class","");
+      document.getElementById("modal").setAttribute("class","");
       document.getElementById("modal-title").style.color="#fff";
       document.getElementById("modal-close").style.color="#fff";
 
       document.getElementById("spinner").style.boxShadow="0px 0px 0 4px "+hex[lux-1];
 
       var el1 = document.querySelectorAll(".pvc");
-      for (var i = 0; i < el1.length; i++){el1[i].style.background=hex[lux-1];}
+      for (var i = 0; i < el1.length; i++){el1[i].style.background=hex[lux-1];el1[i].style.borderColor=hex[lux-1];}
       var el2 = document.querySelectorAll(".fill");
       for (var i = 0; i < el2.length; i++){el2[i].style.background=hex[lux-1];}
     }

@@ -29,11 +29,13 @@ body {
   font-size: 24px;  /* Preferred icon size */
   display: inline-block;
   line-height: 1;
+  transition:.2s;
   text-transform: none;
   letter-spacing: normal;
   word-wrap: normal;
   white-space: nowrap;
   direction: ltr;
+  border-radius: 50%;
   /* Support for all WebKit browsers. */
   -webkit-font-smoothing: antialiased;
   /* Support for Safari and Chrome. */
@@ -41,8 +43,14 @@ body {
   /* Support for Firefox. */
   -moz-osx-font-smoothing: grayscale;
 }
+i.material-icons:hover {
+    background: rgba(255, 255, 255, 0.2) !important;
+}
+.rev i:hover {
+  background: #f3f3f3 !important;
+}
 a{border-bottom:1px solid #000;text-decoration:none;color:inherit !important;}
-i{margin-right:20px;cursor:pointer;color:inherit}
+i{margin-right:10px;cursor:pointer;color:inherit}
 b{
   font-weight: normal;
   font-size: 16px;
@@ -82,7 +90,7 @@ button{
 }
 #clk{font-size:16px;color:inherit}
 #cockpit{
-  top:18px;
+  top:9px;
   right:0px;
   z-index:997;
   color:#fff;
@@ -95,10 +103,12 @@ button{
   animation:fadeIn .1s linear 1;
   -webkit-animation:fadeIn .1s linear 1; /* Safari */
 }
-#close{color:#fff;font-weight:bold}
+.pd{padding:8px}
+#close{color:#fff;font-weight:bold;padding:8px}
 #count{
   font-size:17px;
   margin-right:20px;
+  padding-top:8px;
 }
 #dot{
   width:3px;
@@ -120,7 +130,7 @@ button{
 .wire {
   top:0px;
   width:2px;
-  height:20px;
+  height:25px;
   margin:0 auto;
   position:relative;
   border-left:2px solid #898989;
@@ -171,6 +181,7 @@ button{
   font-size: 14px;
   border-radius: 6px;
   padding: 7px 15px 7px 15px;
+  box-shadow:1px 1px 4px 0px #797979;
 }
 
 .hex-1{background: #000;}
@@ -189,13 +200,14 @@ button{
 
 
 @media (min-width: 760px) {
+  .wire{top:35px !important;}
   button{width:75px !important;height:75px !important}
   #spinner{margin-right:-75px !important}
 }
 
 @media (min-width: 560px) {
   .wire {
-    top:31px;
+    top:29px;
     height: 3px;
     width: 40px;
     border-top:2px solid #898989;
@@ -226,11 +238,12 @@ button{
   #clk{display:none}
   .clue{display:inline}
   b{display:none}
-}@media (max-width: 260px) {
+}
+@media (max-width: 300px) {i{margin-right:0}}
+@media (max-width: 260px) {
   #help{display:none}
   #count{display:none}
 }
-
 @-webkit-keyframes spin {
   0% { -webkit-transform: rotate(0deg); }
   100% { -webkit-transform: rotate(360deg); }
@@ -249,6 +262,14 @@ button{
   100% { opacity:1; }
 }
 
+@-webkit-keyframes pop {
+  0% { transform:translate(-50%, -50%) scale(0.9); }
+  100% { transform:translate(-50%, -50%) scale(1); }
+}
+@keyframes pop {
+  0% { transform:translate(-50%, -50%) scale(0.9); }
+  100% { transform:translate(-50%, -50%) scale(1); }
+}
 #modal {
   top: 50%;
   left: 50%;
@@ -263,19 +284,21 @@ button{
   border-radius: 10px;
   flex-direction: column;
   transform: translate(-50%, -50%);
+  animation:pop .1s 1;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 #modal-close {
-  top: 0;
-  right: 0;
-  width:65px;
-  z-index:999;
-  height:58px;
-  color:#fff;
+  top: 8px;
+  right: 1px;
+  width: 45px;
+  z-index: 999;
+  height: 45px;
+  color: #fff;
   display: flex;
   position: absolute;
-  margin:0 !important;
   align-items: center;
+  font-size: 20px;
+  margin-right:10px;
   justify-content: center;
 }
 
