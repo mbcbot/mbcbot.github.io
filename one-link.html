@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap">
   <link rel="icon" href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/lg/57/link-symbol_1f517.png">
-  <link rel="stylesheet" href="css/ghost_5.0.css">
+  <link rel="stylesheet" href="css/ghost_6.0.css">
 </head>
 
 <body onload="bios()">
@@ -112,7 +112,7 @@
           document.getElementById("timeline").innerHTML+="<div class='wire'></div>";
         }
       }
-      document.getElementById("cockpit").innerHTML="<i class='material-icons pd' onclick='view()'>segment</i><i id='help' class='material-icons pd' onclick='about()'>help_outline</i>";
+      document.getElementById("cockpit").innerHTML="<i title='Classes' class='material-icons pd' onclick='view()'>segment</i><i id='help' class='material-icons pd' title='Settings' onclick='about()'>help_outline</i><i id='booster' title='Launch bot' class='material-icons pd' onclick='deploy()'>launch</i>";
     }else{
       // Handle Rest of the days [M-T-W-Th-F]
       document.getElementById("header").innerHTML=now.toLocaleString('en-us',{weekday:'long'})+"<div id='dot'></div><span id='clk'>"+now.toLocaleString('en-us',{hour:'numeric',minute:'numeric',hour12:true})+"</span>";
@@ -207,7 +207,7 @@
 
 
   function scrub(){
-    document.getElementById("cockpit").innerHTML="<i class='material-icons pd' onclick='view()'>segment</i><i id='help' class='material-icons pd' onclick='about()'>help_outline</i>";
+    document.getElementById("cockpit").innerHTML="<i title='Classes' class='material-icons pd' onclick='view()'>segment</i><i id='help' title='Settings' class='material-icons pd' onclick='about()'>help_outline</i><i id='booster' title='Launch bot' class='material-icons pd' onclick='deploy()'>launch</i>";
     document.getElementById("caption").innerHTML="TIP: Tap the Rings to join faster..";
     document.getElementById("caption").style.fontSize="14px";
     document.title = "One Link";
@@ -356,7 +356,9 @@
       lift_Off(crater.textContent);
     }
   }
-
+  function deploy(){
+    window.open("https://mbcbot.github.io");
+  }
   function lift_Off(tar){
     fuel=false;
     pac=1;
