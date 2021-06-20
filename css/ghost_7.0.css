@@ -248,15 +248,14 @@ button{
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 460px) {
   #clk{display:none}
   .clue{display:inline}
   b{display:none}
 }
 @media (max-width: 375px) {i{margin-right:5px}}
-@media (max-width: 325px) {i{margin-right:2px}}
-@media (max-width: 307px) {#booster{display:none}}
-@media (max-width: 260px) {
+@media (max-width: 345px) {i{margin-right:2px}#booster{display:none}}
+@media (max-width: 295px) {
   #help{display:none}
   #count{display:none}
 }
