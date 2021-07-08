@@ -3,11 +3,11 @@
 Just A bot Tailored for Mbccet Students ;)    
 
 The bot searches in Google classroom for any pending / unsubmitted Assignments, then Generates a report along with its links.
-
+Its custom tailored to also include Attendence from MBC Campus portal
 ## Demo: [View](https://mbcbot.github.io)
 
 (Only Need to authenticate with the bot once. 
-Initial **Loading times may take upto 32 seconds** depending upon the fetched data)
+Initial **Loading times may take upto 27 seconds** depending upon the fetched data)
 
 Current MBC Branches with Access to bot:
 
@@ -24,20 +24,30 @@ Current MBC Branches with Access to bot:
 
 ![preloader](images/loading.png)
 
-Ver 2.0.1   
-![demo](images/demo.png)
+![preloader2](images/loading2.png)
 
-Ver 3.1.0   
-![demo](images/demo_1.png)
+![demo](images/hom.png)
+
+![demo2](images/hom2.png)
+
 
 The Bot also fetches the **list of students** who submitted a Particular Assignment
 (This Feature is only Available for S5/S6 CSE)
 
-![Rem2](images/cse-1.png)
+![Rem1](images/404.png)
 
+List View:    
+![Rem2](images/lv.png)
 
-![Rem2](images/cse-2.png)
+Grid View:   
+![Rem3](images/gv.png)
 
+Reader View:   
+![Rem4](images/rv.png)
+
+The Bot also can also compare Attendence   
+
+![Rem5](images/ac.png)
 ## Limitation:
 
 1. User must be a Member of the Respective Branch's Google Classrooms (list below) else the bot redirects to error page..
