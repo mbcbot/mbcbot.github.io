@@ -6,8 +6,7 @@ The bot searches in Google classroom for any pending / unsubmitted Assignments, 
 Its custom tailored to also include Attendence from MBC Campus portal
 ## Demo: [View](https://mbcbot.github.io)
 
-(Only Need to authenticate with the bot once. 
-Initial **Loading times may take upto 27 seconds** depending upon the fetched data)
+(Only Need to authenticate with the bot once)
 
 Current MBC Branches with Access to bot:
 
@@ -34,13 +33,13 @@ Current MBC Branches with Access to bot:
 The Bot also fetches the **list of students** who submitted a Particular Assignment
 (This Feature is only Available for S5/S6 CSE)
 
-![Rem1](images/404.png)
-
 List View:    
 ![Rem2](images/lv.png)
 
 Grid View:   
 ![Rem3](images/gv.png)
+![GV2](images/gv2.png)
+
 
 Reader View:   
 ![Rem4](images/rv.png)
@@ -50,9 +49,27 @@ The Bot also can also compare Attendence
 ![Rem5](images/ac.png)
 ## Limitation:
 
-1. User must be a Member of the Respective Branch's Google Classrooms (list below) else the bot redirects to error page..
+1. User must be a Member of the Respective Branch's Google Classrooms (list at the end) else the bot redirects to error page..
 
-## Classroom Configs for Different Branches:
+# Onelink Bot
+
+A bot crafted for S6 CSE Students.   
+
+It is a Link Assistant, designed for S6 cse students to help manage the ever-growing mountain of classroom links.
+It is carefully crafted to save Mbcians from day-to-day dystopia of endless video lectures. Providing concrete links and meticulous redirects, Along with a relevant timeline of subjects of the day.
+
+It is pre-coded with S6 CSE Timetable and Would automatically redirect you to the current google meet of that hour
+
+## Onelink Screenshots:
+
+![OL1](images/ol1.png)
+
+![OL2](images/ol2.png)
+
+![OL3](images/ol3.png)
+
+
+## Mbcbot Classroom Configs for Different Branches:
 
 **1. S3 CSE**
 
