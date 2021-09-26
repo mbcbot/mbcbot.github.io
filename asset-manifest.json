@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/MBC-Teams-React/static/css/main.3b1af98a.chunk.css",
+    "main.js": "/MBC-Teams-React/static/js/main.0c4963df.chunk.js",
+    "main.js.map": "/MBC-Teams-React/static/js/main.0c4963df.chunk.js.map",
+    "runtime-main.js": "/MBC-Teams-React/static/js/runtime-main.f1c121fa.js",
+    "runtime-main.js.map": "/MBC-Teams-React/static/js/runtime-main.f1c121fa.js.map",
+    "static/js/2.74d0dba9.chunk.js": "/MBC-Teams-React/static/js/2.74d0dba9.chunk.js",
+    "static/js/2.74d0dba9.chunk.js.map": "/MBC-Teams-React/static/js/2.74d0dba9.chunk.js.map",
+    "index.html": "/MBC-Teams-React/index.html",
+    "static/css/main.3b1af98a.chunk.css.map": "/MBC-Teams-React/static/css/main.3b1af98a.chunk.css.map",
+    "static/js/2.74d0dba9.chunk.js.LICENSE.txt": "/MBC-Teams-React/static/js/2.74d0dba9.chunk.js.LICENSE.txt",
+    "static/js/main.0c4963df.chunk.js.LICENSE.txt": "/MBC-Teams-React/static/js/main.0c4963df.chunk.js.LICENSE.txt",
+    "static/media/arrow.7e8f9123.svg": "/MBC-Teams-React/static/media/arrow.7e8f9123.svg",
+    "static/media/bright.bfeeddaf.svg": "/MBC-Teams-React/static/media/bright.bfeeddaf.svg",
+    "static/media/dark.89a2970e.svg": "/MBC-Teams-React/static/media/dark.89a2970e.svg",
+    "static/media/graph.c2e43a42.svg": "/MBC-Teams-React/static/media/graph.c2e43a42.svg",
+    "static/media/tool.f0e0715d.svg": "/MBC-Teams-React/static/media/tool.f0e0715d.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f1c121fa.js",
+    "static/js/2.74d0dba9.chunk.js",
+    "static/css/main.3b1af98a.chunk.css",
+    "static/js/main.0c4963df.chunk.js"
+  ]
+}
